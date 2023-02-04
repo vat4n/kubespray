@@ -17,7 +17,7 @@ kube_token_dir: "{{ kube_config_dir }}/tokens"
 kube_api_anonymous_auth: true
 
 ## Change this to use another Kubernetes version, e.g. a current beta release
-kube_version: v1.19.10
+kube_version: v1.21.4
 
 # Where the binaries will be downloaded.
 # Note: ensure that you've enough disk space (about 1G)
@@ -123,7 +123,7 @@ kube_apiserver_insecure_port: 0  # (disabled)
 # Kube-proxy proxyMode configuration.
 # Can be ipvs, iptables
 # ipvs has some issue - please test before use
-kube_proxy_mode: ipvs
+kube_proxy_mode: iptables
 
 # configure arp_ignore and arp_announce to avoid answering ARP queries from kube-ipvs0 interface
 # must be set to true for MetalLB to work
@@ -152,7 +152,7 @@ kube_encrypt_secret_data: false
 
 # DNS configuration.
 # Kubernetes cluster name, also will be used as DNS domain
-cluster_name: s000.local
+cluster_name: s053314.local
 # Subdomains of DNS domain to be resolved via /etc/resolv.conf for hostnet pods
 ndots: 2
 # Can be coredns, coredns_dual, manual or none

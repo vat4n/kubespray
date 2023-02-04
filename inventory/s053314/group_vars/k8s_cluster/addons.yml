@@ -84,8 +84,8 @@ rbd_provisioner_enabled: false
 # rbd_provisioner_reclaim_policy: Delete
 
 # Nginx ingress controller deployment
-ingress_nginx_enabled: true
-ingress_nginx_host_network: true
+ingress_nginx_enabled: false
+ingress_nginx_host_network: false
 # ingress_nginx_host_network: false
 ingress_publish_status_address: ""
 ingress_nginx_nodeselector:
@@ -96,11 +96,11 @@ ingress_nginx_tolerations:
 # ingress_nginx_namespace: "ingress-nginx"
 # ingress_nginx_insecure_port: 80
 # ingress_nginx_secure_port: 443
-ingress_nginx_configmap:
-  server-tokens: "False"
-  proxy-body-size: "2048M"
-  proxy-buffer-size: "16k"
-  worker-shutdown-timeout: "180"
+#ingress_nginx_configmap:
+#  server-tokens: "False"
+#  proxy-body-size: "2048M"
+#  proxy-buffer-size: "16k"
+#  worker-shutdown-timeout: "180"
 # ingress_nginx_configmap_tcp_services:
 #   9000: "default/example-go:8080"
 # ingress_nginx_configmap_udp_services:
